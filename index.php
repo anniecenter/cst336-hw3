@@ -45,7 +45,7 @@
                 $("#type").empty();
                 $("#stats").empty();
                 
-                $("#species").append(`<h2>#${data.id} ${data.name.toUpperCase()}<h2>`);
+                $("#species").append(`<h3>#${data.id} ${data.name.toUpperCase()}<h3>`);
                 $("#dex").append(`<img id="sprite" src="${data.sprites.front_default}" /><br>`);
                 if(data.types.length == 2) {
                     $("#type").append(`<h3>TYPE: ${data.types[0].type.name.toUpperCase()} / ${data.types[1].type.name.toUpperCase()}</h3>`);

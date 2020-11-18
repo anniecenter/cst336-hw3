@@ -1,9 +1,19 @@
 body {
     font-family: "Roboto";
-    background-color: #f54242;
+    background-image: url("img/background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     padding: 10px;
     justify-content: center;
     text-align: center;
+}
+
+#type, #species {
+    width: 300px;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #sprite {
@@ -23,6 +33,9 @@ table {
     margin-left: auto;
     margin-right: auto;
     width: 250px;
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 th {
@@ -35,6 +48,6 @@ h1 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
