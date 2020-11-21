@@ -9,7 +9,7 @@
     </head>
     
     <body>
-        <h1>National PokeDex</h1>
+        <h1 id="title">National PokeDex</h1>
         <select id="gen" name="gen">
             <option>Generation</option>
             <option value="1">1</option>

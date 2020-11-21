@@ -1,9 +1,9 @@
 body {
     font-family: "Roboto";
-    background-image: url("img/background.jpg");
+    background-image: url("img/ditto.png");
     background-color: #0c3f7d;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: 70%;
+    background-repeat: repeat;
     padding: 10px;
     justify-content: center;
     text-align: center;
@@ -12,11 +12,14 @@ body {
 select {
     width: 200px;
     height: 33px;
+    background-color: black;
+    color: #e6e6e6;
 }
 
 #type, #species {
     width: 300px;
-    background-color: #e6e6e6;
+    background-color: black;
+    color: #e6e6e6;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +42,8 @@ table {
     margin-left: auto;
     margin-right: auto;
     width: 250px;
-    background-color: #e6e6e6;
+    color: #e6e6e6;
+    background-color: black;
     padding: 10px;
     border-radius: 15px;
 }
@@ -51,6 +55,12 @@ th {
 
 h1 {
     font-size: 50px;
+    width: 500px;
+    background-color: black;
+    color: #e6e6e6;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
