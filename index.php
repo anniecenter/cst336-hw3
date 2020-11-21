@@ -10,7 +10,19 @@
     
     <body>
         <h1>National PokeDex</h1>
+        <select id="gen" name="gen">
+            <option>Generation</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
         <select id="pokemon" name="pokemon">
+            <option>Pokemon</option>
         </select>
         <br><br>
         <div id="display">
@@ -22,17 +34,56 @@
         <script>
             var nationalDex = [];
             
-            async function fetchData(){
+            $("#gen").on("change", async function() {
                 let url = `https://pokeapi.co/api/v2/pokemon?offset=0&limit=890`;
                 let response = await fetch(url);     //retrieves Web API data in raw format
                 let data = await response.json();  //converts the raw data into JSON format
                 
-                $("#pokemon").html("<option>Select One</option>");
-                for (let i = 0; i < data.results.length; i++) {
-                    $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
-                }
+                //$("#pokemon").html("<option>Select One</option>");
+                $("#pokemon").empty();
+                $("#pokemon").html("<option>Pokemon</option>")
                 
-            }
+                if($("#gen").val() == 1) {
+                    for (let i = 0; i < 151; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 2) {
+                    for (let i = 151; i < 251; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 3) {
+                    for (let i = 251; i < 386; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 4) {
+                    for (let i = 386; i < 493; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 5) {
+                    for (let i = 493; i < 649; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 6) {
+                    for (let i = 649; i < 721; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 7) {
+                    for (let i = 721; i < 809; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+                else if($("#gen").val() == 8) {
+                    for (let i = 809; i < 890; i++) {
+                        $("#pokemon").append(`<option value=${data.results[i].name}>${data.results[i].name.toUpperCase()}</option>}`);
+                    }
+                }
+            });
             
             $("#pokemon").on("change", async function() {
                 let pokemon = $("#pokemon").val();

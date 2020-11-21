@@ -1,11 +1,17 @@
 body {
     font-family: "Roboto";
     background-image: url("img/background.jpg");
+    background-color: #0c3f7d;
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 10px;
     justify-content: center;
     text-align: center;
+}
+
+select {
+    width: 200px;
+    height: 33px;
 }
 
 #type, #species {
